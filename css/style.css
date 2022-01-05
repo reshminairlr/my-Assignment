@@ -1,0 +1,120 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.row{
+
+    padding: 0px;
+    margin: 0px;
+}
+
+.myContainer{
+    margin: 7px;
+}
+/* .myContainer1{ */
+    /* margin: 15px; */
+    /* margin-top: 10%; */
+    /* margin-left: 2%;
+    margin-right: 2%; */
+/* } */
+
+ .myForm{ 
+ border: 2px solid black; 
+ padding: 40px;
+} 
+
+
+carouselView{
+    height: 300px;
+    overflow: hidden;
+    width: 100%;
+    }
+    .carouselView img {
+        object-fit:cover;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+
+
+    .carousel-item h5{
+    color: white;
+    text-transform: uppercase;
+  
+    }
+    .carousel-item p{
+        color: white;
+       
+        }
+.carousel-item {
+   
+    height: 300px;
+    overflow: hidden;
+    width: 100%;
+  
+
+
+    }
+    .carousel-item img {
+        object-fit:cover;
+        max-width: 100%;
+        max-height: 100%;
+       
+
+    }
+    
+
+    .navbar-default{
+        position: relative;
+        z-index: 2;
+      }
+
+
+
+
+      .content p{
+        text-align: justify;
+        color: white;
+     }
+
+
+      .content h2{
+            color: white;
+      }
+      
+body{
+    background-color:white;
+}
+
+.demo{ 
+    border: 2px solid darkslategray;
+}
+
+
+.myContainer1 carousel-item{
+
+        height: 100px;
+        overflow: hidden;
+        width: 100%;
+        }
+        .myContainer1 carousel-item img {
+            object-fit:cover;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    
+        
+
+
+    margin: 10px;
+}
+.dist{
+    text-decoration: none;
+    color: black;
+}
+.carousel-caption{
+    color: black;
+    padding: 40px;
+
+}
