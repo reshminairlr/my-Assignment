@@ -57,10 +57,11 @@ carouselView{
 
     }
     .carousel-item img {
+        
         object-fit:cover;
         max-width: 100%;
         max-height: 100%;
-       
+        toLowerCase();
 
     }
     
@@ -106,9 +107,9 @@ body{
     
         
 
-
+/* 
     margin: 10px;
-}
+} */
 .dist{
     text-decoration: none;
     color: black;
