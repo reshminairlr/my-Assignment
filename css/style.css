@@ -24,6 +24,12 @@
  padding: 40px;
 } 
 
+.dstheading {
+    color: darkslategrey;
+}
+.dstlisting h5{
+    color: darkslategrey;
+}
 
 carouselView{
     height: 300px;
@@ -34,7 +40,14 @@ carouselView{
         object-fit:cover;
         max-width: 100%;
         max-height: 100%;
+        background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
     }
+    
     
 
 
@@ -61,7 +74,7 @@ carouselView{
         object-fit:cover;
         max-width: 100%;
         max-height: 100%;
-        toLowerCase();
+        
 
     }
     
@@ -70,8 +83,9 @@ carouselView{
         position: relative;
         z-index: 2;
       }
-
-
+.text-justify{
+    color: darkslategrey;
+}
 
 
       .content p{
@@ -91,6 +105,10 @@ body{
 .demo{ 
     border: 2px solid darkslategray;
 }
+.destination{
+    color:  darkslategray;
+}
+
 
 
 .myContainer1 carousel-item{
@@ -119,3 +137,10 @@ body{
     padding: 40px;
 
 }
+
+.myContainer p{
+    color: darkslategrey;
+}
+
+  
+      
