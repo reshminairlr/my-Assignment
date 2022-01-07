@@ -26,7 +26,7 @@
 }
 
 carouselView{
-    height: 75%;
+    height: 300px;
     overflow: hidden;
     width: 100%;
     }
@@ -42,6 +42,13 @@ carouselView{
 
     }
     
+    .dstlisting{
+        /* Background pattern from Toptal Subtle Patterns */ 
+            height: 400px;
+            width: 100%;
+            background-image: url("./images/coverpic.jpg");
+         
+    }
     
 
 
