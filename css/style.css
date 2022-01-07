@@ -42,7 +42,7 @@ carouselView{
 
     }
     
-    .dstlisting{
+    .body{
         /* Background pattern from Toptal Subtle Patterns */ 
             height: 400px;
             width: 100%;
@@ -152,5 +152,5 @@ body{
     text-align: center;
 }
 .card-title{
-    color: darkslategrey;
+     color: darkslategrey;
 }
