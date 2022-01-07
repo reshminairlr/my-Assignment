@@ -145,4 +145,8 @@ body{
 .btn-primary{
     background-color: darkslategrey;
 }  
-      
+.card-header{
+    background-color: darkslategrey;
+    color: white;
+    text-align: center;
+}
