@@ -103,7 +103,7 @@ carouselView{
       }
       
 body{
-    background-color:white;
+    /* background-color:white; */
 
         padding-top: 70px;
         background-image: image("./image/coverpic.jpg");
