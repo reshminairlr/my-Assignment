@@ -10,7 +10,7 @@
 }
 
 .myContainer{
-    margin: 2px;
+   
 }
 
  .myForm{ 
@@ -138,6 +138,7 @@ body{
 
 .myContainer{
     color: darkslategrey;
+    margin: 2px;
 }
 
 .btn-primary{
