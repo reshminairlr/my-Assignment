@@ -9,10 +9,7 @@
     margin: 0px;
 }
 
-.myContainer{
-   
-}
-
+s
  .myForm{ 
  border: 2px solid black; 
  padding: 40px;
@@ -131,8 +128,9 @@ body{
     color: black;
 }
 .carousel-caption{
-    color: black;
+    color: white;
     padding: 40px;
+    font-family:'Courier New', Courier, monospace;
 
 }
 
