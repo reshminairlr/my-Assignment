@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kerala Tourism</title>
-    <link rel="stylesheet" href="bootstrap.min.css">       
+    <link rel="stylesheet" href="./css/bootstrap.min.css">       
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
 
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -85,43 +85,66 @@
     <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
 
-    <form action="#" method="" class="form-group">
+    <form action="" method="" class="form-group" onsubmit="validateEmail()">
 
     	<p>Please fill in this form to create an account!</p>
 	        <div class="form-group ">
 			<div class="input-group">
-				<input type="text" class="form-control" name="username" placeholder="Username">
+				<input type="text" class="form-control" name="username" placeholder="Username" id="username" oninput="validateUserName()">
 			</div>
-        </div>
+      <!-- <div class="input-group" id="usrerror">
+      </div> -->
+				<p  id="usrerror"></p>
+			</div>
+        
         <div class="form-group">
 			<div class="input-group">
-				<input type="email" class="form-control" name="email" placeholder="Email Address">
+				<input type="email" class="form-control" name="emailid" placeholder="Email Address" id="email" oninput="validateEmail()"  >
 			</div>
+      <!-- <div class="input-group" id="emerror">
+				
+			</div> -->
+      <p  id="errorEmail"></p>
+    
+    </div>
+		<div class="form-group">
+			<div class="input-group">
+				<input type="text" class="form-control" name="password" placeholder="Password" id="password"  oninput="validatePassword()">
+			</div>
+      <span  id="errorPswd"></span>
         </div>
 		<div class="form-group">
 			<div class="input-group">
-				<input type="text" class="form-control" name="password" placeholder="Password" >
+                				<input type="text" class="form-control" name="confirm_password" placeholder="Confirm Password" id="confirm_password"  oninput="validateConfrmPassword()">
 			</div>
+      <span  id="errorPswd"></span>
         </div>
-		<div class="form-group">
-			<div class="input-group">
-                				<input type="text" class="form-control" name="confirm_password" placeholder="Confirm Password">
-			</div>
+
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" class="form-control" name="phno"  placeholder="Phone Number [ XXX-XXX-XXXX or XXX.XXX.XXXX or XXX XXX XXXX ]" id="phno" oninput="validatePhoneNumber()"  >
+          </div>
+          <p  id="errorPhNo"></p>
+        
         </div>
+
+
         <div class="form-group">
 			<label class="checkbox-inline"><input type="checkbox" > I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
 		</div>
 		<div class="form-group">
             <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
         </div>
-    </form>
+   
 	<div class="text-center">Already have an account? <a href="./login.html">Login here</a></div>
+</form>
+</div>
 </div>
 </div>
 </div>
 <div class="col-sm-3"></div>
   
-</div>
+
  
   
 
@@ -136,6 +159,7 @@
 </footer>
 
 
+<script src="./formvalidation.js"> </script>
 
 
 </body>
