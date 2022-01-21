@@ -1,3 +1,6 @@
+// var valPswd=document.getElementById("password").value;
+// var valCfrmPswd=document.getElementById("confirmpassword").value;
+// var checkpswd=document.getElementById("checkpswd");
 function validateUserName()
 {
    var valUsrNme=document.getElementById("username").value;
@@ -31,7 +34,7 @@ function validateEmail()
 {
    var valEmail=document.getElementById("email").value;
     var valError=document.getElementById("errorEmail");
-    console.log(valEmail);
+    // console.log(valEmail);
     let regExp=/^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
         if(regExp.test(valEmail))
         {
@@ -60,7 +63,7 @@ function validatePassword()
     let mediumPswd=((/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/)||(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/));
         if(strongPswd.test(valPswd))
         {
-            valPsdErr.innerHTML= "Strong Password"
+            valPsdErr.innerHTML= "Strong Password";
             valPsdErr.style.color="white";
             // valPsdErr.style.textAlign="center";
             valPsdErr.style.backgroundColor="green";
@@ -70,7 +73,7 @@ function validatePassword()
         else  if(mediumPswd.test(valPswd))
         {
 
-            valPsdErr.innerHTML= "Medium Password"
+            valPsdErr.innerHTML= "Medium Password";
             valPsdErr.style.color="white";
             // valPsdErr.style.textAlign="center";
             valPsdErr.style.backgroundColor="Orange";
@@ -78,7 +81,7 @@ function validatePassword()
             return true;   
         }
         else{
-            valPsdErr.innerHTML= "Week Password"
+            valPsdErr.innerHTML= "Week Password";
             valPsdErr.style.color="white";
             // valPsdErr.style.textAlign="center";
             valPsdErr.style.backgroundColor="red";
@@ -88,11 +91,66 @@ function validatePassword()
 
 }
 
+// conform Password
+function validateConfrmPassword()
+{
+   var valCfrmPswd=document.getElementById("confirmpassword").value;
+
+
+//    console.log(valCfrmPswd);
+  
+
+
+    var valCfrmPsdErr=document.getElementById("errorCfrmPswd");
+    let strongCfrmPswd=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    let mediumCfrmPswd=((/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/)||(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/));
+        if(strongCfrmPswd.test(valCfrmPswd))
+        {
+            valCfrmPsdErr.innerHTML= "Strong Password";
+            valCfrmPsdErr.style.color="white";
+            // valPsdErr.style.textAlign="center";
+            valCfrmPsdErr.style.backgroundColor="green";
+            valCfrmPsdErr.style.fontSize="17px";
+           // var rtrn=matchpswd();
+            return true;    
+        }
+        else  if(mediumCfrmPswd.test(valCfrmPswd))
+        {
+
+            valCfrmPsdErr.innerHTML= "Medium Password";
+            valCfrmPsdErr.style.color="white";
+            // valPsdErr.style.textAlign="center";
+            valCfrmPsdErr.style.backgroundColor="Orange";
+            valCfrmPsdErr.style.fontSize="17px";
+            // var rtrn=matchpswd();
+            return true;   
+        }
+        else{
+            valCfrmPsdErr.innerHTML= "Week Password";
+            valCfrmPsdErr.style.color="white";
+            // valPsdErr.style.textAlign="center";
+            valCfrmPsdErr.style.backgroundColor="red";
+            valCfrmPsdErr.style.fontSize="17px";
+            // var rtrn=matchpswd();
+            return false;
+            
+        }
+        
+
+
+        }
+        
+
+
+
+
+
+
 // Phone Number
 function validatePhoneNumber() 
 {
    var valPhno=document.getElementById("phno").value;
-   console.log(valPhno);
+//    console.log(valPhno);
     var valPhnoErr=document.getElementById("errorPhNo");
     let phNoregExp=/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
         if(phNoregExp.test(valPhno))

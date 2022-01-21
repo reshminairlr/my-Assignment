@@ -55,7 +55,7 @@
 
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-Secondary my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
       </form>
 
     </div>
@@ -90,7 +90,7 @@
     	<p>Please fill in this form to create an account!</p>
 	        <div class="form-group ">
 			<div class="input-group">
-				<input type="text" class="form-control" name="username" placeholder="Username" id="username" oninput="validateUserName()">
+				<input type="text" class="form-control" name="username"  required placeholder="Username" id="username" oninput="validateUserName()">
 			</div>
       <!-- <div class="input-group" id="usrerror">
       </div> -->
@@ -99,7 +99,7 @@
         
         <div class="form-group">
 			<div class="input-group">
-				<input type="email" class="form-control" name="emailid" placeholder="Email Address" id="email" oninput="validateEmail()"  >
+				<input type="email" class="form-control" name="emailid"  required placeholder="Email Address" id="email" oninput="validateEmail()"  >
 			</div>
       <!-- <div class="input-group" id="emerror">
 				
@@ -109,20 +109,21 @@
     </div>
 		<div class="form-group">
 			<div class="input-group">
-				<input type="text" class="form-control" name="password" placeholder="Password" id="password"  oninput="validatePassword()">
+				<input type="password" class="form-control" name="password" required placeholder="Password" id="password"  oninput="validatePassword()">
 			</div>
       <span  id="errorPswd"></span>
         </div>
 		<div class="form-group">
 			<div class="input-group">
-                				<input type="text" class="form-control" name="confirm_password" placeholder="Confirm Password" id="confirm_password"  oninput="validateConfrmPassword()">
+                				<input type="password" class="form-control"  required name="confirm_password" placeholder="Confirm Password" id="confirmpassword"  oninput="matchpswd()">
 			</div>
-      <span  id="errorPswd"></span>
+      <span  id="errorCfrmPswd"></span>
+      <span  id="checkpswd"></span>
         </div>
 
         <div class="form-group">
           <div class="input-group">
-            <input type="text" class="form-control" name="phno"  placeholder="Phone Number [ XXX-XXX-XXXX or XXX.XXX.XXXX or XXX XXX XXXX ]" id="phno" oninput="validatePhoneNumber()"  >
+            <input type="text" class="form-control" name="phno"  required placeholder="Phone Number [ XXX-XXX-XXXX or XXX.XXX.XXXX or XXX XXX XXXX ]" id="phno" oninput="validatePhoneNumber()"  >
           </div>
           <p  id="errorPhNo"></p>
         
@@ -130,7 +131,7 @@
 
 
         <div class="form-group">
-			<label class="checkbox-inline"><input type="checkbox" > I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+			<label class="checkbox-inline"><input type="checkbox" required > I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
 		</div>
 		<div class="form-group">
             <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
@@ -152,14 +153,42 @@
 
 <footer class="page-footer font-small special-color-dark pt-4" style="background-color: darkslategray;">
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright
+  <div class="footer-copyright text-center py-3"style="color: white;">© 2020 Copyright: Kerala Tourism
     <!-- <a href="#"> </a> -->
   </div>
   <!-- Copyright -->
 </footer>
 
 
-<script src="./formvalidation.js"> </script>
+<script src="./formvalidation.js"> 
+</script>
+
+<script type="text/javascript">
+
+function matchpswd()
+       {
+        var pswd=document.getElementById("password").value;
+        var cfrmPswd=document.getElementById("confirmpassword").value;
+        var checkpswd=document.getElementById("checkpswd");
+        // console.log(valPswd);
+       
+        if(pswd==cfrmPswd)
+        {
+        
+          checkpswd.innerHTML="  Password matched ";
+          checkpswd.style.color="green";
+          validateConfrmPassword();
+          return true;
+        }
+        else{
+          checkpswd.innerHTML=" Password didn't match";
+          checkpswd.style.color="red";
+          validateConfrmPassword();
+          return false;
+        
+        }
+    }
+</script>
 
 
 </body>
